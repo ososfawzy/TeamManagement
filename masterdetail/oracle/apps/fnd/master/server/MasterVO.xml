@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="MasterVO"
+   BindingStyle="OracleName"
+   CustomQuery="true"
+   RowClass="masterdetail.oracle.apps.fnd.master.server.MasterVORowImpl"
+   ComponentClass="oracle.apps.fnd.framework.server.OAViewObjectImpl"
+   UseGlueCode="false" >
+   <SQLQuery><![CDATA[
+SELECT MasterEO.TEAM_ID, 
+       MasterEO.MEMBER_NAME, 
+       MasterEO.FIXED, 
+       MasterEO.ACCESS_TYPE, 
+       MasterEO.APPROVER, 
+       MasterEO.APPROVE_SEQUENCE, 
+       MasterEO.CHAIRMAN, 
+       MasterEO.VICE_CHAIRMAN, 
+       MasterEO.MOF, 
+       MasterEO.AUDITOR, 
+       MasterEO.HCSS, 
+       MasterEO.CDM, 
+       MasterEO.HTACS, 
+       MasterEO.LASTNOTIFIED
+FROM XX_MEMBERS MasterEO
+   ]]></SQLQuery>
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_isExpertMode" Value="true" />
+      <Attr Name="_version" Value="10.1.3.41.57" />
+      <Attr Name="_codeGenFlag2" Value="Access|VarAccess" />
+   </DesignTime>
+   <EntityUsage
+      Name="MasterEO"
+      Entity="masterdetail.oracle.apps.fnd.master.schema.server.MasterEO" >
+      <DesignTime>
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="TeamId"
+      EntityAttrName="TeamId"
+      EntityUsage="MasterEO"
+      AliasName="TEAM_ID" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="MemberName"
+      IsNotNull="true"
+      EntityAttrName="MemberName"
+      EntityUsage="MasterEO"
+      AliasName="MEMBER_NAME" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Fixed"
+      EntityAttrName="Fixed"
+      EntityUsage="MasterEO"
+      AliasName="FIXED" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="AccessType"
+      IsNotNull="true"
+      EntityAttrName="AccessType"
+      EntityUsage="MasterEO"
+      AliasName="ACCESS_TYPE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Approver"
+      EntityAttrName="Approver"
+      EntityUsage="MasterEO"
+      AliasName="APPROVER" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="ApproveSequence"
+      EntityAttrName="ApproveSequence"
+      EntityUsage="MasterEO"
+      AliasName="APPROVE_SEQUENCE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Chairman"
+      EntityAttrName="Chairman"
+      EntityUsage="MasterEO"
+      AliasName="CHAIRMAN" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="ViceChairman"
+      EntityAttrName="ViceChairman"
+      EntityUsage="MasterEO"
+      AliasName="VICE_CHAIRMAN" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Mof"
+      EntityAttrName="Mof"
+      EntityUsage="MasterEO"
+      AliasName="MOF" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Auditor"
+      EntityAttrName="Auditor"
+      EntityUsage="MasterEO"
+      AliasName="AUDITOR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Hcss"
+      EntityAttrName="Hcss"
+      EntityUsage="MasterEO"
+      AliasName="HCSS" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Cdm"
+      EntityAttrName="Cdm"
+      EntityUsage="MasterEO"
+      AliasName="CDM" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Htacs"
+      EntityAttrName="Htacs"
+      EntityUsage="MasterEO"
+      AliasName="HTACS" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Lastnotified"
+      EntityAttrName="Lastnotified"
+      EntityUsage="MasterEO"
+      AliasName="LASTNOTIFIED" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SelectFlag"
+      IsPersistent="false"
+      Type="java.lang.Boolean"
+      ColumnType="NUMBER"
+      AliasName="VIEW_ATTR"
+      SQLType="BIT" >
+   </ViewAttribute>
+   <AttrArray Name="KeyAttributes">
+      <Item Value="TeamId" />
+      <Item Value="SelectFlag" />
+   </AttrArray>
+</ViewObject>

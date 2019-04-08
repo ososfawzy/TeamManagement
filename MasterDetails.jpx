@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE JboProject SYSTEM "jbo_03_01.dtd">
+
+<JboProject
+   Name="MasterDetails"
+   SeparateXMLFiles="true"
+   PackageName="" >
+   <DesignTime>
+      <Attr Name="_ejbPackage" Value="false" />
+      <Attr Name="_NamedConnection" Value="DBConnection1" />
+      <Attr Name="_version" Value="10.1.3.41.57" />
+      <Attr Name="_jprName" Value="MasterDetails.jpr" />
+      <Attr Name="_appModuleNames0" Value="masterdetail.oracle.apps.fnd.master.server.MasterDetailsAM" />
+   </DesignTime>
+   <Containee
+      Name="server"
+      FullName="masterdetail.oracle.apps.fnd.master.schema.server.server"
+      ObjectType="JboPackage" >
+   </Containee>
+   <Containee
+      Name="server"
+      FullName="masterdetail.oracle.apps.fnd.master.server.server"
+      ObjectType="JboPackage" >
+   </Containee>
+</JboProject>

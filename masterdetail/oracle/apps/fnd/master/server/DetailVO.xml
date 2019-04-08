@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="DetailVO"
+   SelectList="DetailEO.TEAM_ID, 
+       DetailEO.TEAM_NAME, 
+       DetailEO.TEAM_ARABIC_NAME, 
+       DetailEO.SHORT_NAME, 
+       DetailEO.TEAM_TYPE, 
+       DetailEO.SECRETARY, 
+       DetailEO.SECRETARY_ASSISTANT, 
+       DetailEO.END_DATE, 
+       DetailEO.BUDGET_FROM, 
+       DetailEO.BUDGET_TO, 
+       DetailEO.DESCRIPTION, 
+       DetailEO.CREATION_DATE, 
+       DetailEO.CREATED_BY, 
+       DetailEO.LAST_UPDATE_DATE, 
+       DetailEO.LAST_UPDATE_BY"
+   FromList="XX_TEAM DetailEO"
+   BindingStyle="OracleName"
+   CustomQuery="false"
+   RowClass="masterdetail.oracle.apps.fnd.master.server.DetailVORowImpl"
+   ComponentClass="oracle.apps.fnd.framework.server.OAViewObjectImpl"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="10.1.3.41.57" />
+      <Attr Name="_codeGenFlag2" Value="Access|VarAccess" />
+   </DesignTime>
+   <EntityUsage
+      Name="DetailEO"
+      Entity="masterdetail.oracle.apps.fnd.master.schema.server.DetailEO" >
+      <DesignTime>
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="TeamId"
+      EntityAttrName="TeamId"
+      EntityUsage="DetailEO"
+      AliasName="TEAM_ID" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="TeamName"
+      IsNotNull="true"
+      EntityAttrName="TeamName"
+      EntityUsage="DetailEO"
+      AliasName="TEAM_NAME" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="TeamArabicName"
+      EntityAttrName="TeamArabicName"
+      EntityUsage="DetailEO"
+      AliasName="TEAM_ARABIC_NAME" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="ShortName"
+      IsNotNull="true"
+      EntityAttrName="ShortName"
+      EntityUsage="DetailEO"
+      AliasName="SHORT_NAME" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="TeamType"
+      EntityAttrName="TeamType"
+      EntityUsage="DetailEO"
+      AliasName="TEAM_TYPE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Secretary"
+      IsNotNull="true"
+      EntityAttrName="Secretary"
+      EntityUsage="DetailEO"
+      AliasName="SECRETARY" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SecretaryAssistant"
+      EntityAttrName="SecretaryAssistant"
+      EntityUsage="DetailEO"
+      AliasName="SECRETARY_ASSISTANT" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="EndDate"
+      EntityAttrName="EndDate"
+      EntityUsage="DetailEO"
+      AliasName="END_DATE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="BudgetFrom"
+      EntityAttrName="BudgetFrom"
+      EntityUsage="DetailEO"
+      AliasName="BUDGET_FROM" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="BudgetTo"
+      EntityAttrName="BudgetTo"
+      EntityUsage="DetailEO"
+      AliasName="BUDGET_TO" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Description"
+      EntityAttrName="Description"
+      EntityUsage="DetailEO"
+      AliasName="DESCRIPTION" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CreationDate"
+      EntityAttrName="CreationDate"
+      EntityUsage="DetailEO"
+      AliasName="CREATION_DATE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CreatedBy"
+      EntityAttrName="CreatedBy"
+      EntityUsage="DetailEO"
+      AliasName="CREATED_BY" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="LastUpdateDate"
+      EntityAttrName="LastUpdateDate"
+      EntityUsage="DetailEO"
+      AliasName="LAST_UPDATE_DATE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="LastUpdateBy"
+      EntityAttrName="LastUpdateBy"
+      EntityUsage="DetailEO"
+      AliasName="LAST_UPDATE_BY" >
+   </ViewAttribute>
+</ViewObject>
